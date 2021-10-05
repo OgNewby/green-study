@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+html,
+body {
+  background-image: url(./images/class.jpg);
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+.brand img {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  max-width: 200px;
+}
+
+.brand .brand-label {
+  transition: all 0.2s ease-in-out;
+}
+.brand .brand-label svg {
+  position: absolute;
+  left: -90%;
+  top: -90%;
+  height: 280%;
+  width: 280%;
+  pointer-events: none;
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+.brand .brand-label svg text {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.375px;
+  font-variation-settings: "wght" 650;
+  fill: whitesmoke;
+  text-transform: uppercase;
+}
+.brand:hover .brand-label svg {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
